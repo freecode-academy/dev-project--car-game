@@ -1,13 +1,19 @@
 import { NextSeo } from 'next-seo'
+import dynamic from 'next/dynamic'
 
 import { Page } from '../_App/interfaces'
+// import { CarView } from './View'
+
+const CarView = dynamic(import('./View'), {
+  ssr: false,
+})
 
 export const MainPage: Page = () => {
   return (
     <>
       <NextSeo title="Main page" description="Main page description" />
 
-      <div>Main Page</div>
+      <CarView />
     </>
   )
 }
