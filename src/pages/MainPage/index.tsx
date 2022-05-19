@@ -13,7 +13,7 @@ export const MainPage: Page = () => {
     <>
       <NextSeo title="Main page" description="Main page description" />
 
-      <CarView />
+      {CarView && <CarView />}
     </>
   )
 }
